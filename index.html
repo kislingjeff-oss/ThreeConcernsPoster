@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="The three concerns about Friends, why they cannot wait, and the turn from extraction to reciprocity.">
+<meta name="author" content="Jeff Kisling, member of Bear Creek Meeting, Iowa Yearly Meeting (Conservative)">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Three Concerns Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: a plain blueprint sheet. Single light theme, by Jeff's choice. */
+:root{
+  --bg:#E8F2FC; --paper:#FFFFFF; --ink:#0A2342; --ink-2:#2E4A6B; --line:#B9D3EE;
+  --blue:#1660C8; --blue-soft:#D6E7FA; --poverty:#C97800; --freedom:#1E8A4C; --violence:#C4283F;
+  --sans:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif; --mono:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:20px 36px;max-width:1240px;margin:0 auto}
+h1{margin:0;font-size:clamp(1.6rem,1.2rem + 1.6vw,2.4rem);letter-spacing:-0.01em;text-wrap:balance}
+h2{margin:0 0 8px;font-size:1.35rem;text-wrap:balance}
+h3{margin:0 0 6px;font-size:1.05rem}
+p{margin:0 0 10px}
+.lede{color:var(--ink-2);max-width:70ch;margin-top:6px}
+.sheet{background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0}
+.scene{width:100%;height:auto;display:block}
+.stats{width:100%;height:auto;display:block}
+.cap{font:700 1.45rem var(--sans);letter-spacing:0;margin-bottom:8px}
+.cap.x{color:var(--violence)} .cap.r{color:var(--blue)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:0.92rem}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+.note{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:0.88rem}
+.note b{display:block}
+.note a{color:var(--blue)}
+.callout{background:var(--ink);color:#fff;border-radius:12px;padding:14px 16px}
+.callout p:last-child{margin:0}
+.moves{counter-reset:m;list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
+.moves li{counter-increment:m;display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px}
+.moves li::before{content:counter(m);font:700 0.85rem var(--mono);background:var(--blue);color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
+footer{margin-top:18px;font-size:0.82rem;color:var(--ink-2)}
+
+.panels{display:grid;gap:16px}
+.panels.both{grid-template-columns:minmax(0,1fr);gap:44px}
+.panels.both figure+figure{border-top:2px solid var(--line);padding-top:24px}
+
+figure{margin:0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.col{border:1px solid var(--line);border-top:5px solid;border-radius:10px;padding:12px 14px;font-size:0.95rem}
+.col p{margin:0 0 6px}
+.col .q{font-style:italic;color:var(--ink-2);margin-top:8px}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;align-items:start}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tabs a{font:600 0.95rem var(--sans);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;text-decoration:none}
+.tabs a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tabs a:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.part+.part{margin-top:16px}
+
+.why-h{font-size:clamp(1.6rem,1.2rem + 1.5vw,2.2rem)}
+.why-lede{font-size:1.08rem;max-width:68ch}
+.map-wrap{margin:8px 0 6px}
+.tiemap{width:100%;height:auto;display:block}
+@media (max-width:640px){.map-wrap{display:none}}
+.tie-legend{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:0.85rem;color:var(--ink-2);margin:4px 0 14px}
+.tie-legend span{display:inline-flex;align-items:center;gap:8px}
+.tie-legend i{display:inline-block;width:34px;background:var(--ink-2);border-radius:4px}
+.concern-ties{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.ct{border:1.5px solid var(--line);border-top:8px solid var(--c);border-radius:12px;padding:14px 16px;min-width:0}
+.ct header{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.ct .num{font:700 0.9rem var(--mono);background:var(--c);color:#fff;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;flex:none}
+.ct h3{margin:0;font-size:1.1rem}
+.ct .qline{font-size:0.92rem;color:var(--ink-2);border-left:3px solid var(--c);padding-left:10px}
+.ct ul{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:12px}
+.ct li{border-top:1px solid var(--line);padding-top:10px}
+.ct .fig b{display:block;font:700 1.5rem var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.ct .fig span{display:block;font-weight:600;font-size:0.92rem}
+.ct .fig em{display:block;font-style:normal;font-size:0.82rem;color:var(--c);font-weight:600}
+.ct li p{margin:6px 0 0;font-size:0.95rem}
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}
+.reasons div{background:var(--ink);color:#fff;border-radius:12px;padding:12px 14px;font-size:0.94rem}
+.reasons b{display:block;margin-bottom:2px}
+.srcs{font-size:0.85rem;color:var(--ink-2);padding-left:18px;margin:0}
+.srcs a{color:var(--blue)}
+.col .urgent,.col .moral{margin-top:10px;padding:10px 12px;border-radius:8px}
+.col .urgent{background:#FFF4E5;border-left:4px solid var(--violence)}
+.col .moral{background:var(--blue-soft);border-left:4px solid var(--blue)}
+.col h4{margin:0 0 4px;font-size:0.8rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink)}
+.col .urgent p,.col .moral p{margin:0;font-size:0.93rem}
+.concern-ties{grid-template-rows:auto auto 1fr}
+@media (min-width:641px){.concern-ties{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:2.222%;padding-inline:1.111%}}
+@media (max-width:640px){.concern-ties{grid-template-columns:minmax(0,1fr)}.ct{grid-row:auto!important;display:block!important}}
+@supports (grid-template-rows:subgrid){.ct{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0}}
+.ct .qline{margin:0 0 4px}
+.ct ul{align-content:start}
+.ct .fig b{font-family:var(--sans);font-variant-numeric:tabular-nums lining-nums}
+.ct li{display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header style="display:grid;gap:4px;margin-bottom:14px">
+    <h1>Three Concerns Poster</h1>
+    <p class="lede">Poverty, freedom and violence are three kinds of extraction. One question tests them all: which way does it flow, and does it flow back?</p>
+  </header>
+  <nav class="tabs" aria-label="Parts of the poster">
+    <a href="#why-now" data-tab="why-now">Why now?</a>
+    <a href="#drawing" data-tab="drawing">The drawing</a>
+    <a href="#concerns" data-tab="concerns">Three concerns</a>
+    <a href="#direction" data-tab="direction">A new direction</a>
+    <a href="#whole" data-tab="whole">Whole poster</a>
+  </nav>
+
+  <section class="sheet part" id="p-why-now" data-part-of="why-now">
+    <h2 class="why-h">Why now?</h2>
+    <p class="why-lede">Each of my three concerns about Friends is setting records at the same time. These are not abstractions. They are what the three concerns look like this year.</p>
+    <div class="map-wrap" id="tiemap"></div>
+    <div id="ties"></div>
+    <div class="reasons">
+      <div><b>Every concern at once.</b> Hunger, wealth at the top, homelessness and detention are all at or near records together, and they feed each other.</div>
+      <div><b>The measuring is being taken away.</b> USDA ended its food security report after the 2024 numbers. What is no longer counted is easier to ignore.</div>
+      <div><b>The window is closing.</b> At the 2024 rate, the carbon budget for 1.5°C runs out in about three years from the start of 2025.</div>
+      <div><b>Channels take years to build.</b> The relationships that let a community meet its own needs cannot be started on the day they are needed. The moment they are needed is not the moment to begin.</div>
+    </div>
+    <h3 style="margin-top:16px">Sources</h3>
+    <div id="srcs"></div>
+  </section>
+
+  <section class="sheet part" id="p-drawing" data-part-of="drawing">
+    <div class="panels both">
+      <figure><figcaption class="cap x">Extraction: taking, with nothing fair coming back</figcaption><div id="sx"></div></figure>
+      <figure><figcaption class="cap r">Reciprocity: giving and receiving, both ways, and keeping it going</figcaption><div id="sr"></div></figure>
+    </div>
+    <div class="legend" style="margin-top:14px">
+      <span><span class="sw" style="background:var(--poverty)"></span>Sacks and crates: food and goods</span>
+      <span><span class="sw" style="background:var(--freedom)"></span>Green fields: land and labor</span>
+      <span><span class="sw" style="background:var(--violence)"></span>Red: guards and barbed wire (force)</span>
+      <span><span class="sw" style="background:var(--blue)"></span>Blue: neighbors, both ways</span>
+    </div>
+  </section>
+
+  <section class="sheet part" id="p-concerns" data-part-of="concerns">
+    <h2>Three concerns, three kinds of extraction</h2>
+    <div class="cols">
+      <div class="col" style="border-top-color:var(--poverty)"><h3>1. The poverty around us</h3><p><b>Taken:</b> food and goods, held behind a wall of money. Food sits in the store while people go without.</p><p><b>Hidden by:</b> charity, which manages need.</p><p><b>Answered by:</b> mutual aid, meeting needs as equals.</p><div class="urgent"><h4>Why now</h4><p>In 2024, 13.7% of households could not count on food, the most since 2014, and the report that counted them has been ended. Homelessness reached a record. Need is growing while the means of seeing it are being taken away. Generations of charity have not ended it. Each year spent carrying buckets leaves the river diverted upstream.</p></div>
+<div class="moral"><h4>Why doing nothing is not a Quaker response</h4><p>"If a brother or sister be naked, and destitute of daily food, and one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?" (James 2:15–16). Our own Advices say each of us is both giver and receiver. Doing nothing is not neutral. The arrangement keeps running, and we keep living on it.</p></div>
+<p class="q">Do we recognize the difference between charity and mutual aid? Do we understand how it shows the fundamental differences in hierarchy and power each represents?</p></div>
+      <div class="col" style="border-top-color:var(--freedom)"><h3>2. Who gets to be free</h3><p><b>Taken:</b> land and labor, and young people's futures, through the economic draft.</p><p><b>Hidden by:</b> deeds and "help."</p><p><b>Answered by:</b> LANDBACK, and showing up to work by invitation.</p><div class="urgent"><h4>Why now</h4><p>The top 1% now hold a record share of household wealth. Debt, job lock and enlistment are deciding young people's lives before they can choose. At the 2024 rate, the carbon budget for 1.5°C runs out in about three years from the start of 2025, so young people's futures are being spent now. And there are channels ready to join: in 2025 Great Plains Action Society secured land for its Urban Resilience Hub in Iowa City, and its work-weeks welcome people who will show up.</p></div>
+<div class="moral"><h4>Why doing nothing is not a Quaker response</h4><p>Woolman wrote that a claim proved by seals and witnesses does not become right: "the nature of it must be changed before it can be right." In 1874 the committee on Indian affairs of my own meeting reported that it "found nothing to do." We are still living with what that inaction left in place. We cannot hold a testimony of equality while still occupying, unexamined, the position that inequality built for us.</p></div>
+<p class="q">We know there are millions suffering an economic draft: from student debt, from needing a job because of its health benefits, or from a lack of economic opportunity that leads to the armed forces.</p></div>
+      <div class="col" style="border-top-color:var(--violence)"><h3>3. The violence holding it up</h3><p><b>Taken:</b> safety, by the force that keeps the taking in place.</p><p><b>Hidden by:</b> neutrality.</p><p><b>Answered by:</b> active objection, and standing with people where the force falls.</p><div class="urgent"><h4>Why now</h4><p>About 73,000 people were held in ICE detention in January 2026, the most ever recorded and up about 84% in a year. Neighbors are being taken. Force grows fastest where the people nearby look away, and every month it grows, it becomes more normal.</p></div>
+<div class="moral"><h4>Why doing nothing is not a Quaker response</h4><p>Our peace testimony was never only a refusal to fight. George Fox said he lived "in the virtue of that life and power that took away the occasion of all wars." Friends in my own meeting refused the draft during the Vietnam War, at real cost. Quaker neutrality in front of armed enforcement isn't peace. It leaves the force free to fall on others while we keep our own hands clean.</p></div>
+<p class="q">The scenes of armed repression and deportation are horrifying to watch. We know where this is likely to go. How can we say we are a peaceful people if we simply watch?</p></div>
+    </div>
+  </section>
+
+  <section class="sheet part" id="p-direction" data-part-of="direction">
+    <h2>What a new direction asks</h2>
+    <p>Adjustment is not repair. A gentler way of taking is still taking. The new direction is a turn away from one-way channels altogether, and it can begin now, in our own lives.</p>
+    <ol class="moves">
+      <li><span><b>Name the channel.</b> Say plainly which way it flows, in each case.</span></li>
+      <li><span><b>Withdraw where you really can.</b> Hold less that ties your welfare to someone else's loss.</span></li>
+      <li><span><b>Open or join a channel that runs both ways.</b> Mutual aid, LANDBACK, showing up for work, by invitation, and staying.</span></li>
+    </ol>
+    <p style="margin-top:12px"><i>It matters little what we say we believe while our lives still run on the arrangement that produces the suffering we say we oppose.</i></p>
+  </section>
+  <footer>From <i>Three Concerns About Friends</i>, Expanded Edition, by Jeff Kisling, member of Bear Creek Meeting, Iowa Yearly Meeting (Conservative). Speaks for no meeting or organization.</footer>
+</div>
+<script>
+/* Shared drawing code: a side-view, clay-style scene of a community, in two states. */
+const C={ink:"#0A2342",ink2:"#2E4A6B",line:"#B9D3EE",blue:"#1660C8",bluesoft:"#D6E7FA",poverty:"#C97800",freedom:"#1E8A4C",violence:"#C4283F",ground:"#F1F6FC",bare:"#E3D9C6",glass:"#EAF4FF",gold:"#E9B949"};
+const W=900,H=440,BASE=380;
+const HX_X=[48,114,180, 720,786,852];
+const HX_R=[70,180,290,400,510,620,730,840];
+const SKIN=["#8D5524","#C68B59","#5C3A1E","#E0AC69","#A86B3C","#F1C27D","#6B4226","#D19A66"];
+const SHIRT=["#3F6E9E","#7A5C99","#4E8F86","#9C6B3E","#5A6B7D","#8E4F5E","#3E7A52","#7D7A3C"];
+const sq=v=>v*v;
+const AMP=175, TOP=BASE-AMP, Y0=TOP-118;
+function gyX(x){ let y=BASE-AMP*Math.exp(-sq((x-450)/52)); HX_X.forEach(h=>{ y+=9*Math.exp(-sq((x-h)/22)); }); return y; }
+function gyR(x){ return 372+5*Math.sin(x/38); }
+function groundPath(g,fill){ let d=`M0,${H} L0,${g(0).toFixed(1)}`; for(let x=0;x<=W;x+=5) d+=` L${x},${g(x).toFixed(1)}`; d+=` L${W},${H} Z`; return `<path d="${d}" fill="${fill}" stroke="#7A5A36" stroke-width="2"/>`; }
+function bandPath(g,x0,x1,th){ let top=[],bot=[]; for(let x=x0;x<=x1;x+=4){ top.push(`${x},${(g(x)-0.5).toFixed(1)}`); bot.unshift(`${x},${(g(x)+th).toFixed(1)}`); } return `M${top.join(' L')} L${bot.join(' L')} Z`; }
+function label(x,y,text,anchor="start",color=C.ink){ return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="IBM Plex Sans, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="${color}" paint-order="stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">${text}</text>`; }
+
+function defs(id){
+  const lg=(n,a,b,x2=0,y2=1)=>`<linearGradient id="${id}-${n}" x1="0" y1="0" x2="${x2}" y2="${y2}"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;
+  const rg=(n,a,b)=>`<radialGradient id="${id}-${n}" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></radialGradient>`;
+  return `<defs>
+  <filter id="${id}-clay" x="-15%" y="-15%" width="130%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="warp"/>
+    <feDisplacementMap in="SourceGraphic" in2="warp" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="2" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.16 0" result="grainA"/>
+    <feComposite in="grainA" in2="shape" operator="in" result="grainIn"/>
+    <feMerge result="tex"><feMergeNode in="shape"/><feMergeNode in="grainIn"/></feMerge>
+    <feDropShadow in="tex" dx="1.5" dy="2.5" stdDeviation="1.6" flood-color="#3A2A18" flood-opacity="0.35"/>
+  </filter>
+  ${lg('ground','#E9D4AE','#C29B68')}${lg('groundR','#E6D7B6','#C9AE84')}
+  ${lg('dirt','#9C6E44','#6E4A2A')}${lg('crop','#5BC07F','#1E7A43')}
+  ${lg('steel','#B9C4CF','#5F6F80')}${lg('red','#E4515F','#951A2B')}${lg('wall','#F4E6C8','#D8BC88')}${lg('roof','#B5523F','#6E2A1E')}
+  ${rg('sack','#F4BE62','#A86200')}${rg('gold','#FFE58A','#B8860B')}${lg('wood','#D99B45','#94590F')}
+  ${["poverty","freedom","blue"].map(k=>`<marker id="${id}-${k}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${k==='blue'?C.blue:C[k]}"/></marker>`).join('')}
+  <marker id="${id}-brown" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8A4E12"/></marker>
+  <marker id="${id}-big" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="${C.freedom}"/></marker>
+  </defs>`;
+}
+/* clay figures and things */
+function house(id,x,y){ return `<g><rect x="${x-14}" y="${y-20}" width="28" height="21" rx="3" fill="url(#${id}-wall)" stroke="#8A6A3A" stroke-width="1.2"/>
+  <path d="M${x-18},${y-18} Q${x-17},${y-21} ${x-14},${y-23} L${x},${y-36} L${x+14},${y-23} Q${x+17},${y-21} ${x+18},${y-18} Z" fill="url(#${id}-roof)" stroke="#5A2016" stroke-width="1.2"/>
+  <rect x="${x-10}" y="${y-15}" width="8" height="7" rx="1.5" fill="#FFD27A" stroke="#8A6A3A"/><rect x="${x+3}" y="${y-13}" width="7" height="13" rx="2" fill="#7A4A26"/></g>`; }
+function person(x,y,i,o={}){
+  const sk=SKIN[i%SKIN.length], sh=SHIRT[i%SHIRT.length], hy=o.slump?y-25:y-27, hx=o.slump?x+1.5:x;
+  let s=`<g><rect x="${x-5}" y="${y-11}" width="4" height="11" rx="2" fill="#3A3A48"/><rect x="${x+1}" y="${y-11}" width="4" height="11" rx="2" fill="#3A3A48"/>`;
+  s+=`<rect x="${x-6.5}" y="${y-(o.slump?20:22)}" width="13" height="${o.slump?12:14}" rx="6" fill="${sh}" stroke="rgba(0,0,0,.25)"/>`;
+  s+=`<circle cx="${hx}" cy="${hy}" r="5.4" fill="${sk}" stroke="rgba(0,0,0,.25)"/>`;
+  if(o.bowl){ s+=`<path d="M${x+3},${y-15} L${x+9},${y-14}" stroke="${sk}" stroke-width="3" stroke-linecap="round"/><path d="M${x+6},${y-16} q5,7 11,0 z" fill="#EFE6D6" stroke="${C.poverty}" stroke-width="1.8"/>`; }
+  if(o.give){ const d=o.give; s+=`<path d="M${x+3*d},${y-16} L${x+10*d},${y-17}" stroke="${sk}" stroke-width="3" stroke-linecap="round"/>`+sack(o.id,x+15*d,y-12,0.75); }
+  return s+`</g>`;
+}
+function suit(x,y){ return `<g><rect x="${x-5}" y="${y-11}" width="4" height="11" rx="2" fill="#1B1B24"/><rect x="${x+1}" y="${y-11}" width="4" height="11" rx="2" fill="#1B1B24"/>
+  <rect x="${x-7}" y="${y-23}" width="14" height="15" rx="6" fill="#22252E"/><path d="M${x},${y-22} L${x-1.5},${y-13} L${x},${y-11} L${x+1.5},${y-13} Z" fill="${C.gold}"/>
+  <circle cx="${x}" cy="${y-28}" r="5.4" fill="#E9C9A5" stroke="rgba(0,0,0,.25)"/></g>`; }
+function shieldSvg(sx,y){ return `<rect x="${sx}" y="${y-58}" width="13" height="52" rx="3" fill="#A9BED0" opacity="0.62" stroke="#2E3A48" stroke-width="1.6"/><rect x="${sx}" y="${y-44}" width="13" height="7" fill="#1B2333" opacity="0.9"/><text x="${sx+6.5}" y="${y-38.6}" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="4.6" font-weight="700" fill="#fff" letter-spacing="0.2">POLICE</text><rect x="${sx}" y="${y-14}" width="13" height="3" fill="${C.violence}" opacity="0.9"/>`; }
+function guard(id,x,y,face=1,mode='all'){
+  const m=-face; // mirror so shield is on the side toward the homes
+  const P=(px)=>x+px*m;
+  let s=`<g>`;
+  if(mode==='shield'){ const sx=Math.min(P(-28),P(-15)); return s+shieldSvg(sx,y)+`</g>`; }
+  // boots
+  s+=`<path d="M${P(-7)},${y} l0,-5 l${6*m},0 l${1*m},5 z" fill="#0E0E12"/><path d="M${P(1)},${y} l0,-5 l${6*m},0 l${1*m},5 z" fill="#0E0E12"/>`;
+  // legs with knee pads
+  s+=`<path d="M${P(-7)},${y-5} L${P(-8)},${y-24} L${P(-1)},${y-24} L${P(-1.5)},${y-5} Z" fill="#1B2333"/><path d="M${P(1)},${y-5} L${P(0.5)},${y-24} L${P(7.5)},${y-24} L${P(7)},${y-5} Z" fill="#1B2333"/>`;
+  s+=`<rect x="${Math.min(P(-7.8),P(-1.6))}" y="${y-16}" width="6.2" height="5" rx="2" fill="#3A4252"/><rect x="${Math.min(P(0.8),P(7))}" y="${y-16}" width="6.2" height="5" rx="2" fill="#3A4252"/>`;
+  // torso and tactical vest
+  s+=`<path d="M${P(-9)},${y-24} L${P(-10)},${y-42} Q${P(0)},${y-46} ${P(10)},${y-42} L${P(9)},${y-24} Z" fill="#1B2333"/>`;
+  s+=`<path d="M${P(-8)},${y-26} L${P(-8.5)},${y-40} Q${P(0)},${y-43} ${P(8.5)},${y-40} L${P(8)},${y-26} Z" fill="url(#${id}-red)" stroke="#4A0C14" stroke-width="1"/>`;
+  s+=`<rect x="${Math.min(P(-6),P(-1))}" y="${y-33}" width="5" height="5" rx="1" fill="#5E0F1A"/><rect x="${Math.min(P(1),P(6))}" y="${y-33}" width="5" height="5" rx="1" fill="#5E0F1A"/>`;
+  s+=`<rect x="${Math.min(P(-9),P(9))}" y="${y-27}" width="18" height="3" fill="#0E0E12"/>`;
+  // shoulders
+  s+=`<ellipse cx="${P(-10)}" cy="${y-41}" rx="4" ry="3" fill="#2A3242"/><ellipse cx="${P(10)}" cy="${y-41}" rx="4" ry="3" fill="#2A3242"/>`;
+  // baton arm (back side), raised
+  s+=`<path d="M${P(10)},${y-40} L${P(14)},${y-32} L${P(17)},${y-44}" fill="none" stroke="#1B2333" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  s+=`<circle cx="${P(17)}" cy="${y-45}" r="2.6" fill="#0E0E12"/><path d="M${P(17)},${y-45} L${P(21)},${y-66}" stroke="#0E0E12" stroke-width="3.4" stroke-linecap="round"/><path d="M${P(16)},${y-50} l${-4*m},-1" stroke="#0E0E12" stroke-width="2.4" stroke-linecap="round"/>`;
+  // head: face, helmet, visor
+  s+=`<rect x="${x-2.5}" y="${y-48}" width="5" height="4" fill="#1B2333"/>`;
+  s+=`<ellipse cx="${x}" cy="${y-53}" rx="5.6" ry="6.4" fill="${SKIN[Math.round(x)%SKIN.length]}"/>`;
+  s+=`<path d="M${x-7},${y-53} Q${x-7.5},${y-64} ${x},${y-65} Q${x+7.5},${y-64} ${x+7},${y-53} L${x+7},${y-51} L${x-7},${y-51} Z" fill="#0E1118"/>`;
+  s+=`<path d="M${x-7},${y-56} Q${x},${y-58} ${x+7},${y-56} L${x+7},${y-48} Q${x},${y-46} ${x-7},${y-48} Z" fill="#8FB0C8" opacity="0.55" stroke="#5E7A90" stroke-width="0.8"/>`;
+  s+=`<path d="M${x-4},${y-62} Q${x-1},${y-64} ${x+2},${y-63}" stroke="#fff" stroke-width="1.2" opacity="0.45" fill="none"/>`;
+  // shield arm and riot shield (front side)
+  s+=`<path d="M${P(-10)},${y-40} L${P(-15)},${y-30}" stroke="#1B2333" stroke-width="4.5" stroke-linecap="round"/>`;
+  if(mode==='body') return s+`</g>`;
+  const sx=Math.min(P(-28),P(-15));
+  s+=`<rect x="${sx}" y="${y-58}" width="13" height="52" rx="3" fill="#A9BED0" opacity="0.6" stroke="#2E3A48" stroke-width="1.6"/>`;
+  s+=`<rect x="${sx}" y="${y-44}" width="13" height="7" fill="#1B2333" opacity="0.9"/><text x="${sx+6.5}" y="${y-38.6}" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="4.6" font-weight="700" fill="#fff" letter-spacing="0.2">POLICE</text>`;
+  s+=`<rect x="${sx}" y="${y-14}" width="13" height="3" fill="${C.violence}" opacity="0.9"/>`;
+  return s+`</g>`;
+}
+function barbed(x0,x1,g){ let s=`<g>`; for(let x=x0;x<=x1;x+=13){ const y=g(x); s+=`<rect x="${x-1.6}" y="${y-30}" width="3.2" height="30" rx="1" fill="#6B4A2A"/>`; }
+  [24,15,7].forEach(h=>{ let d=''; for(let x=x0;x<=x1;x+=4){ d+=(d?' L':'M')+x+','+(g(x)-h).toFixed(1); } s+=`<path d="${d}" fill="none" stroke="#4A4F57" stroke-width="1.3"/>`;
+    for(let x=x0+3;x<=x1;x+=7){ const y=g(x)-h; s+=`<path d="M${x-2},${y-2} L${x+2},${y+2} M${x+2},${y-2} L${x-2},${y+2}" stroke="#4A4F57" stroke-width="1.1"/>`; } });
+  return s+`</g>`; }
+function sack(id,x,y,k=1){ return `<g transform="translate(${x},${y}) scale(${k})"><path d="M-8,0 Q-10,-12 -4,-16 L-5,-19 Q0,-21 5,-19 L4,-16 Q10,-12 8,0 Q0,3 -8,0 Z" fill="url(#${id}-sack)" stroke="#7A4A00" stroke-width="1.1"/><path d="M-4,-16 Q0,-14 4,-16" stroke="#7A4A00" stroke-width="1.2" fill="none"/></g>`; }
+function crate(id,x,y,s=15){ return `<g><rect x="${x}" y="${y}" width="${s}" height="${s}" rx="1.5" fill="url(#${id}-wood)" stroke="#6B3E05" stroke-width="1.1"/><path d="M${x+1},${y+s/3} H${x+s-1} M${x+1},${y+2*s/3} H${x+s-1}" stroke="#6B3E05" stroke-width="0.9" opacity="0.7"/></g>`; }
+function crops(g,x0,x1){ let s=''; for(let x=x0+3;x<=x1-3;x+=7){ const y=g(x); s+=`<path d="M${x},${y} q-3,-7 -1,-11 M${x},${y} q3,-6 1,-10" stroke="#1E6B3A" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="${x}" cy="${y-9}" rx="2.2" ry="3.2" fill="#3FA463"/>`; } return s; }
+function furrows(g,x0,x1){ let s=`<path d="${bandPath(g,x0,x1,9)}" fill="url(#__ID__-dirt)" stroke="#5A3A1E" stroke-width="1"/>`; for(let x=x0+5;x<x1;x+=8){ const y=g(x); s+=`<path d="M${x},${y+1} l-3,7" stroke="#4A2E16" stroke-width="1" opacity=".6"/>`; } return s; }
+
+function drawExtraction(id){
+  let s=`<svg viewBox="0 ${Y0} ${W} ${H-Y0}" role="img" aria-labelledby="${id}-t" class="scene" xmlns="http://www.w3.org/2000/svg"><title id="${id}-t">Extraction: food and goods carried up to a locked warehouse held by the few; fields fenced off behind barbed wire and armed guards; people left at home with empty bowls on bare dirt.</title>${defs(id)}`;
+  s+=`<rect y="${Y0}" width="${W}" height="${H-Y0}" fill="#FBFDFF"/>`;
+  s+=`<g data-part="peak" filter="url(#${id}-clay)">${groundPath(gyX,`url(#${id}-ground)`)}</g>`;
+  // FREEDOM: bare dirt where fields were; one fenced estate
+  s+=`<g class="p-freedom" data-part="emptyfields" filter="url(#${id}-clay)">`;
+  HX_X.forEach(h=>{ s+=furrows(gyX,h-30,h+30).replace(/__ID__/g,id); });
+  s+=`</g>`;
+  s+=`<g class="p-freedom" data-part="estate"><g filter="url(#${id}-clay)"><path d="${bandPath(gyX,316,390,13)}" fill="url(#${id}-crop)"/><path d="${bandPath(gyX,510,584,13)}" fill="url(#${id}-crop)"/>${crops(gyX,318,388)}${crops(gyX,512,582)}</g>`;
+  s+=`<path d="M30,432 L292,432" stroke="${C.freedom}" stroke-width="7" marker-end="url(#${id}-big)"/><path d="M870,432 L608,432" stroke="${C.freedom}" stroke-width="7" marker-end="url(#${id}-big)"/></g>`;
+  // VIOLENCE: barbed wire and armed guards
+  s+=`<g class="p-violence" data-part="wall"><g filter="url(#${id}-clay)">${barbed(304,318,gyX)}${barbed(582,596,gyX)}`;
+  s+=`<g transform="translate(352,${gyX(352)-34})"><rect x="-1.5" y="0" width="3" height="16" fill="#6B4A2A"/><rect x="-22" y="-12" width="44" height="13" rx="2" fill="#F7F2E8" stroke="#6B4A2A"/><text x="0" y="-2.5" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="8.5" font-weight="700" fill="${C.violence}">PRIVATE</text></g>`;
+  const G=(x,f)=>`<g transform="translate(${x},${gyX(x)}) scale(1.05) translate(${-x},${-gyX(x)})">${guard(id,x,gyX(x),f)}</g>`; const GS=[[294,-1],[270,-1],[246,-1],[606,1],[630,1],[654,1]]; const Gm=(x,f,mode)=>`<g transform="translate(${x},${gyX(x)}) scale(1.05) translate(${-x},${-gyX(x)})">${guard(id,x,gyX(x),f,mode)}</g>`; s+=GS.map(([x,f])=>Gm(x,f,'body')).join('')+GS.map(([x,f])=>Gm(x,f,'shield')).join('');
+  s+=`</g></g>`;
+  // POVERTY: carried up to a locked warehouse
+  s+=`<g class="p-poverty" data-part="flowup">`;
+  HX_X.forEach(h=>{ const y=gyX(h)-40; const tx= h<450? 382 : 518; s+=`<path d="M${h},${y} Q${(h+450)/2},${TOP-70} ${tx},${TOP-34}" fill="none" stroke="#8A4E12" stroke-width="3" marker-end="url(#${id}-brown)"/>`; });
+  s+=`</g>`;
+  const wy=TOP+3;
+  s+=`<g class="p-poverty" data-part="storehouse"><g filter="url(#${id}-clay)">`;
+  s+=`<rect x="390" y="${wy-72}" width="120" height="74" rx="4" fill="url(#${id}-steel)" stroke="#3E4A58" stroke-width="1.5"/>`;
+  s+=`<path d="M384,${wy-70} Q450,${wy-96} 516,${wy-70} Z" fill="#4D5A68" stroke="#2F3946" stroke-width="1.5"/>`;
+  for(let x=396;x<=504;x+=9) s+=`<path d="M${x},${wy-72} L${x},${wy-70-Math.max(0,24-sq((x-450)/11))}" stroke="#2F3946" stroke-width="0.8" opacity="0.5"/>`;
+  s+=`<rect x="402" y="${wy-60}" width="96" height="50" rx="3" fill="#2E2A24"/>`;
+  [[410,0],[426,0],[442,0],[458,0],[474,0],[418,1],[434,1],[450,1],[466,1],[426,2],[442,2],[458,2]].forEach(([x,r],k)=>{ s+= k%2? crate(id,x-6,wy-24-r*14,13) : sack(id,x+2,wy-11-r*14,0.82); });
+  for(let x=406;x<=494;x+=8) s+=`<rect x="${x}" y="${wy-60}" width="2.6" height="50" fill="#1A1A1A"/>`;
+  s+=`<rect x="402" y="${wy-37}" width="96" height="2.6" fill="#1A1A1A"/>`;
+  s+=`<path d="M443,${wy-12} a7,8 0 0 1 14,0" fill="none" stroke="#777" stroke-width="3"/><rect x="439" y="${wy-13}" width="22" height="18" rx="3" fill="url(#${id}-gold)" stroke="#7A5A00"/><text x="450" y="${wy+1}" text-anchor="middle" font-family="IBM Plex Sans, Arial" font-size="13" font-weight="700" fill="#5A3E00">$</text>`;
+  s+=`</g></g>`;
+  // the few, on the roof
+  s+=`<g data-part="few" filter="url(#${id}-clay)">${suit(436,wy-84)}${suit(464,wy-84)}</g>`;
+  // homes and people with empty bowls
+  HX_X.forEach((h,i)=>{ const y=gyX(h); s+=`<g data-part="home" filter="url(#${id}-clay)">${house(id,h,y)}</g><g class="p-poverty" data-part="bowls" filter="url(#${id}-clay)">${person(h+22,gyX(h+22),i,{bowl:1,slump:1})}</g>`; });
+  s+=label(512,TOP-104,"The few");
+  s+=label(530,TOP-50,"Goods held behind money",'start',C.poverty);
+  s+=label(450,BASE+50,"Land enclosed",'middle',C.freedom);
+  s+=label(30,BASE+38,"Fields taken from every home",'start',C.freedom);
+  s+=label(630,gyX(630)-84,"Force",'middle',C.violence);
+  s+=label(870,BASE+38,"Empty bowls at home",'end',C.poverty);
+  return s+`</svg>`;
+}
+function drawReciprocity(id){
+  let s=`<svg viewBox="0 176 ${W} ${H-176}" role="img" aria-labelledby="${id}-t" class="scene" xmlns="http://www.w3.org/2000/svg"><title id="${id}-t">Reciprocity: food and goods at every home, fields growing around every home and joined as a commons, neighbors handing goods to each other both ways, no warehouse, no fence, no guards.</title>${defs(id)}`;
+  s+=`<rect y="176" width="${W}" height="${H-176}" fill="#FBFDFF"/>`;
+  s+=`<g data-part="circle"><ellipse cx="450" cy="378" rx="430" ry="30" fill="none" stroke="${C.blue}" stroke-width="2" stroke-dasharray="7 6" opacity="0.7"/></g>`;
+  s+=`<g data-part="ground" filter="url(#${id}-clay)">${groundPath(gyR,`url(#${id}-groundR)`)}</g>`;
+  s+=`<g data-part="peakgone"><path d="M380,${gyR(380)} Q450,150 520,${gyR(520)}" fill="none" stroke="${C.ink2}" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.45"/></g>`;
+  s+=`<g class="p-freedom" data-part="fields" filter="url(#${id}-clay)">`;
+  HX_R.forEach(h=>{ s+=`<path d="${bandPath(gyR,h-50,h+50,11)}" fill="url(#${id}-crop)"/>`+crops(gyR,h-48,h-18)+crops(gyR,h+40,h+50); });
+  s+=`</g>`;
+  s+=`<g class="p-poverty" data-part="goods" filter="url(#${id}-clay)">`;
+  HX_R.forEach(h=>{ const y=gyR(h+30); s+=sack(id,h+24,y,0.9)+crate(id,h+31,y-14,14)+sack(id,h+38,y-14,0.75); });
+  s+=`</g>`;
+  s+=`<g data-part="arcs">`;
+  for(let i=0;i<HX_R.length-1;i++){ const a=HX_R[i], b=HX_R[i+1], y=gyR(a)-46;
+    s+=`<path d="M${a+4},${y} Q${(a+b)/2},${y-46} ${b-4},${y}" fill="none" stroke="${C.blue}" stroke-width="2.2" marker-end="url(#${id}-blue)"/>`;
+    s+=`<path d="M${b-4},${y-12} Q${(a+b)/2},${y-74} ${a+4},${y-12}" fill="none" stroke="${C.blue}" stroke-width="2.2" marker-end="url(#${id}-blue)" opacity="0.75"/>`; }
+  s+=`</g>`;
+  HX_R.forEach((h,i)=>{ s+=`<g data-part="home" filter="url(#${id}-clay)">${house(id,h-6,gyR(h-6))}${person(h-30,gyR(h-30),i+2,{give:-1,id})}</g>`; });
+  s+=label(450,232,"Neighbors, both ways",'middle',C.blue);
+  s+=label(450,196,"No warehouse, no fence, no guards",'middle',C.ink2);
+  s+=label(890,424,"Goods at every home",'end',C.poverty);
+  s+=label(10,424,"Fields at every home, joined as a commons",'start',C.freedom);
+  return s+`</svg>`;
+}
+
+const STATS=[
+  {name:"People in ICE detention", c:"violence", then:40000, now:73000, thenL:"under 40,000 (Jan 2025)", nowL:"about 73,000 (Jan 2026)", note:"The highest the agency has recorded, up about 84% in a year.", src:"CBS News, from internal DHS data", url:"https://www.cbsnews.com/news/ices-detainee-population-record-high-of-73000"},
+  {name:"Top 1% share of U.S. household wealth", c:"poverty", then:22.4, now:32.5, thenL:"22.4% (1990 low)", nowL:"32.5% (Q2 2026)", note:"A record in the Federal Reserve's distributional accounts.", src:"Federal Reserve Distributional Financial Accounts, via FRED", url:"https://www.thetrading.tools/chart-of-the-day/2026-09-20-top-1-percent-wealth-share-record"},
+  {name:"People homeless on one night", c:"freedom", then:653000, now:771000, thenL:"about 653,000 (Jan 2023)", nowL:"over 770,000 (Jan 2024)", note:"A record, up 18% in one year. The 2023 figure is derived from that increase.", src:"HUD report, via Connecticut Public", url:"https://www.ctpublic.org/2024-12-27/u-s-homelessness-jumps-to-another-record-high-amid-affordable-housing-shortage"},
+  {name:"Households without secure access to food", c:"poverty", then:null, now:13.7, max:20, thenL:"", nowL:"13.7% (2024)", note:"Highest since 2014. USDA has ended the report, so this is the last reading of its kind.", src:"USDA Economic Research Service, via RFD-TV", url:"https://www.rfdtv.com/food-insecurity-hits-highest-level-since-2014-as-usda-ends-long-running-report?p=46"},
+  {name:"Carbon budget left for 1.5°C", c:"freedom", then:130, now:null, falling:true, thenL:"130 billion t CO₂ (start of 2025)", nowL:"", note:"About three years of emissions at the 2024 rate. Today's figure is an estimate at that rate, not a measurement.", src:"Indicators of Global Climate Change 2024, University of Leeds", url:"https://climate.leeds.ac.uk/news/scientists-find-three-years-left-of-remaining-carbon-budget-for-1-5c/"}
+];
+(function(){ const yrs=(Date.now()-Date.UTC(2025,0,1))/(365.25*864e5); const left=Math.max(0,130-130/3.1*yrs); STATS[4].now=left; STATS[4].nowL="about "+Math.round(left)+" billion t (estimated today)"; })();
+
+function drawStats(){
+  const rowH=78, bw=900;
+  const T=(x,y,t,o={})=>`<text x="${x}" y="${y}" text-anchor="${o.a||'start'}" font-family="${o.mono?'IBM Plex Sans, Segoe UI, Arial, sans-serif':'IBM Plex Sans, Arial, sans-serif'}" font-size="${o.fs||13}" font-weight="${o.fw||400}" fill="${o.fill||C.ink2}">${t}</text>`;
+  let s=`<svg viewBox="0 0 ${bw} ${STATS.length*rowH+6}" class="stats" role="img" aria-label="Earlier and latest readings for five indicators" xmlns="http://www.w3.org/2000/svg">`;
+  STATS.forEach((d,i)=>{
+    const y=i*rowH+4, max=d.max || Math.max(d.then||0,d.now||0), col=C[d.c];
+    s+=T(0,y+15,d.name,{fs:15,fw:600,fill:C.ink});
+    if(d.then!=null){ const tw=bw*d.then/max; s+=`<rect x="0.75" y="${y+24}" width="${tw-1.5}" height="18" fill="none" stroke="${C.ink}" stroke-width="1.5" stroke-dasharray="5 3"/>`;
+      s+= tw<bw-260 ? T(tw+8,y+37,'earlier: '+d.thenL,{mono:1,fs:12}) : T(tw-8,y+37,'earlier: '+d.thenL,{mono:1,fs:12,a:'end'}); }
+    const nw=bw*d.now/max; s+=`<rect x="0" y="${y+46}" width="${nw}" height="22" fill="${col}"/>`;
+    if(d.then==null){ s+=`<rect x="${nw}" y="${y+46}" width="80" height="22" fill="none" stroke="${C.ink2}" stroke-dasharray="3 3"/>`+T(nw+90,y+62,d.nowL+', the last reading',{mono:1,fs:13,fw:600,fill:C.ink})+T(bw,y+15,'scale 0 to 20% of households · dashed: no longer measured',{fs:12,a:'end'}); }
+    else s+= nw<bw-300 ? T(nw+8,y+62,d.nowL,{mono:1,fs:13,fw:600,fill:C.ink}) : T(nw-8,y+62,d.nowL,{mono:1,fs:13,fw:600,fill:'#fff',a:'end'});
+  });
+  return s+`</svg>`;
+}
+
+document.getElementById('sx').innerHTML=drawExtraction('px');
+document.getElementById('sr').innerHTML=drawReciprocity('pr');
+/* Why now: each record tied back to the three concerns. */
+const CONC=[
+  {k:"poverty", n:"1", t:"The poverty around us", line:"Food sits in the store while|people starve outside it.", q:"Do we recognize the difference between charity and mutual aid? Do we understand how it shows the fundamental differences in hierarchy and power each represents?"},
+  {k:"freedom", n:"2", t:"Who gets to be free", line:"A legal and economic order|built to keep it that way.", q:"We know there are millions suffering an economic draft: from student debt, from needing a job because of its health benefits, or from a lack of economic opportunity that leads to the armed forces."},
+  {k:"violence", n:"3", t:"The violence holding it up", line:"Police, prisons, borders,|deportations.", q:"The scenes of armed repression and deportation are horrifying to watch. We know where this is likely to go. How can we say we are a peaceful people if we simply watch?"}
+];
+const IND=[
+  {id:"food", name:"Households without secure food", big:"13.7%", when:"2024", change:"Highest since 2014", flag:"Report now ended",
+   ties:{poverty:"In a land with more than enough, more than one household in eight could not count on food. And the report that counted them has been ended. A need no longer measured is easier to ignore."},
+   main:"poverty", src:"USDA Economic Research Service, via RFD-TV", url:"https://www.rfdtv.com/food-insecurity-hits-highest-level-since-2014-as-usda-ends-long-running-report?p=46"},
+  {id:"wealth", name:"Top 1% share of household wealth", big:"32.5%", when:"Q2 2026", change:"Record · up from 22.4% (1990)",
+   ties:{poverty:"Survival is made conditional on money, while about a third of all household wealth sits with one household in a hundred.", freedom:"This is the peak in the drawing: value flowing up, and an order built to keep it there."},
+   main:"poverty", src:"Federal Reserve Distributional Financial Accounts, via FRED", url:"https://www.thetrading.tools/chart-of-the-day/2026-09-20-top-1-percent-wealth-share-record"},
+  {id:"homeless", name:"People homeless on one night", big:"770,000+", when:"Jan 2024", change:"Record · up 18% in a year",
+   ties:{poverty:"Children and families without a home, in a land with more than enough.", freedom:"Who holds land and housing decides who is free to have a home at all."},
+   main:"poverty", src:"HUD report, via Connecticut Public", url:"https://www.ctpublic.org/2024-12-27/u-s-homelessness-jumps-to-another-record-high-amid-affordable-housing-shortage"},
+  {id:"carbon", name:"Carbon budget left for 1.5°C", big:"≈3 years", when:"from the start of 2025", change:"130 billion t CO₂ at the 2024 rate", chip:"Window closing",
+   ties:{freedom:"Young people's futures are being spent now. The costs fall first on peoples whose land the pipelines cross. Our 2018 march followed one of those pipelines."},
+   main:"freedom", src:"Indicators of Global Climate Change 2024, University of Leeds", url:"https://climate.leeds.ac.uk/news/scientists-find-three-years-left-of-remaining-carbon-budget-for-1-5c/"},
+  {id:"ice", name:"People in ICE detention", big:"≈73,000", when:"Jan 2026", change:"Record · up 84% in a year",
+   ties:{violence:"The force has changed uniforms again. This is the deportation our third query asks about.", freedom:"Who gets to be free, in the most literal sense."},
+   main:"violence", src:"CBS News, from internal DHS data", url:"https://www.cbsnews.com/news/ices-detainee-population-record-high-of-73000"}
+];
+
+function drawTieMap(){
+  const W=900,H=430, cx={poverty:150,freedom:450,violence:750};
+  const ix=IND.map((d,i)=>90+i*180);
+  const F="IBM Plex Sans, Segoe UI, Arial, sans-serif", M="IBM Plex Sans, Segoe UI, Arial, sans-serif";
+  let s=`<svg viewBox="0 0 ${W} ${H}" class="tiemap" role="img" aria-label="Five records, each connected to the concerns it belongs to" xmlns="http://www.w3.org/2000/svg">`;
+  // connectors first (behind boxes)
+  IND.forEach((d,i)=>{ Object.keys(d.ties).forEach(k=>{
+    const x1=ix[i], y1=250, x2=cx[k], y2=132, main=k===d.main;
+    s+=`<path d="M${x1},${y1} C${x1},${(y1+y2)/2} ${x2},${(y1+y2)/2} ${x2},${y2}" fill="none" stroke="${C[k]}" stroke-width="${main?7:3.5}" stroke-linecap="round" opacity="${main?1:0.75}"/>`;
+  }); });
+  // concerns
+  CONC.forEach(c=>{ const x=cx[c.k];
+    s+=`<rect x="${x-140}" y="10" width="280" height="122" rx="12" fill="${C[c.k]}"/>`;
+    s+=`<text x="${x}" y="42" text-anchor="middle" font-family="${M}" font-size="15" fill="#fff" opacity="0.9">Concern ${c.n}</text>`;
+    s+=`<text x="${x}" y="70" text-anchor="middle" font-family="${F}" font-size="19" font-weight="700" fill="#fff">${c.t}</text>`;
+    c.line.split('|').forEach((ln,j)=>{ s+=`<text x="${x}" y="${98+j*18}" text-anchor="middle" font-family="${F}" font-size="14" font-style="italic" fill="#fff">${ln}</text>`; });
+  });
+  // indicators
+  IND.forEach((d,i)=>{ const x=ix[i], col=C[d.main];
+    s+=`<rect x="${x-84}" y="250" width="168" height="168" rx="12" fill="#fff" stroke="${col}" stroke-width="3"/>`;
+    s+=`<text x="${x}" y="296" text-anchor="middle" font-family="${M}" font-size="30" font-weight="700" fill="${C.ink}">${d.big}</text>`;
+    s+=`<text x="${x}" y="318" text-anchor="middle" font-family="${F}" font-size="13" fill="${C.ink2}">${d.when}</text>`;
+    const parts=d.name.split(' '), l1=[], l2=[]; let len=0; parts.forEach(p=>{ if(len+p.length<19){l1.push(p); len+=p.length+1;} else l2.push(p); });
+    s+=`<text x="${x}" y="346" text-anchor="middle" font-family="${F}" font-size="15" font-weight="600" fill="${C.ink}">${l1.join(' ')}</text>`;
+    if(l2.length) s+=`<text x="${x}" y="365" text-anchor="middle" font-family="${F}" font-size="15" font-weight="600" fill="${C.ink}">${l2.join(' ')}</text>`;
+    s+=`<rect x="${x-76}" y="380" width="152" height="26" rx="13" fill="${C.ground}"/><text x="${x}" y="398" text-anchor="middle" font-family="${F}" font-size="12.5" font-weight="600" fill="${col}">${d.chip||d.change.split(' · ')[0]}</text>`;
+  });
+  return s+`</svg>`;
+}
+function whyNowHTML(){
+  let h='';
+  h+=`<div class="concern-ties">`;
+  CONC.forEach(c=>{
+    const rel=IND.filter(d=>d.ties[c.k]);
+    h+=`<article class="ct" style="--c:var(--${c.k})"><header><span class="num">${c.n}</span><h3>${c.t}</h3></header>
+      <p class="qline"><i>${c.q}</i></p><ul>`;
+    rel.forEach(d=>{ h+=`<li><div class="fig"><b>${d.big}</b><span>${d.name}, ${d.when}</span><em>${d.change}${d.flag?' · '+d.flag:''}</em></div><p>${d.ties[c.k]}</p></li>`; });
+    h+=`</ul></article>`;
+  });
+  h+=`</div>`;
+  return h;
+}
+function sourcesHTML(){ return `<ul class="srcs">`+IND.map(d=>`<li>${d.name}: <a href="${d.url}" target="_blank" rel="noopener">${d.src}</a></li>`).join('')+`<li>The carbon figure is about three years of emissions from the start of 2025, at the 2024 rate.</li></ul>`; }
+
+document.getElementById('tiemap').innerHTML=drawTieMap();
+document.getElementById('ties').innerHTML=whyNowHTML();
+document.getElementById('srcs').innerHTML=sourcesHTML();
+(function(){
+  const tabs=['why-now','drawing','concerns','direction','whole'];
+  function show(){
+    let t=location.hash.slice(1); if(!tabs.includes(t)) t='why-now';
+    document.querySelectorAll('.part').forEach(p=>{ p.hidden = !(t==='whole' || p.dataset.partOf===t); });
+    document.querySelectorAll('.tabs a').forEach(a=>{ const on=a.dataset.tab===t; a.classList.toggle('on',on); if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  }
+  window.addEventListener('hashchange',show); show();
+})();
+</script>
+
+</body>
+</html>
