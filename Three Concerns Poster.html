@@ -304,11 +304,11 @@ function drawExtraction(id){
   // homes and people with empty bowls
   HX_X.forEach((h,i)=>{ const y=gyX(h); s+=`<g data-part="home" filter="url(#${id}-clay)">${house(id,h,y)}</g><g class="p-poverty" data-part="bowls" filter="url(#${id}-clay)">${person(h+22,gyX(h+22),i,{bowl:1,slump:1})}</g>`; });
   s+=label(512,TOP-104,"The few");
-  s+=label(530,TOP-50,"Goods held behind money",'start',C.poverty);
-  s+=label(450,BASE+50,"Land enclosed",'middle',C.freedom);
-  s+=label(30,BASE+38,"Fields taken from every home",'start',C.freedom);
-  s+=label(630,gyX(630)-84,"Force",'middle',C.violence);
-  s+=label(870,BASE+38,"Empty bowls at home",'end',C.poverty);
+  s+=`<g class="p-poverty">`+label(530,TOP-50,"Goods held behind money",'start',C.poverty)+`</g>`;
+  s+=`<g class="p-freedom">`+label(450,BASE+50,"Land enclosed",'middle',C.freedom)+`</g>`;
+  s+=`<g class="p-freedom">`+label(30,BASE+38,"Fields taken from every home",'start',C.freedom)+`</g>`;
+  s+=`<g class="p-violence">`+label(630,gyX(630)-84,"Force",'middle',C.violence)+`</g>`;
+  s+=`<g class="p-poverty">`+label(870,BASE+38,"Empty bowls at home",'end',C.poverty)+`</g>`;
   return s+`</svg>`;
 }
 function drawReciprocity(id){
